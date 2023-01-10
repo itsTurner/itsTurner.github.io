@@ -1,5 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700');
 
+* {
+    transition: all 200ms;
+}
+
+a {
+    color: #1B0E19;
+    text-decoration: none;
+    border-bottom: 1px solid #E0A146;
+}
+a:hover {
+    /* border-bottom-width: 2px; */
+    background-color: #E0A14630;
+}
+
+.tooltip {
+    text-decoration:none;
+    position:relative;
+}
+.tooltip .desc {
+    display: none;
+    transition: none;
+}
+.tooltip:hover .desc {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -76,6 +104,13 @@ aside .links a {
     font-weight: bold;
     font-size: .8em;
     margin: 0;
+    border: none;
+    box-sizing: border-box;
+    height: 1.5em;
+    width: fit-content;
+}
+aside .links a:hover {
+    border-bottom: 1px solid #E0A146;
 }
 
 @media (max-width: 850px) {

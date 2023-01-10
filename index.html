@@ -12,7 +12,7 @@
     <story>
         <header>
             <h1>Hi, I'm Tavin!</h1>
-            <div class="content">Live from snowy Colorado, I'm trying to make good things with technology. Wanna talk?</div>
+            <div class="content">Live from <span class="tooltip">snowy Colorado<span class="desc">🏔</span></span>, I'm trying to make good things with technology. <a href="mailto:hey@ta.vin">Wanna talk?</a></div>
         </header>
         <section>
             <h2>Right now I'm...</h2>
@@ -58,5 +58,15 @@
             <a href="mailto:hey@ta.vin">Email</a>
         </div>
     </aside>
+    <script>
+        var tooltipSpan = document.querySelector('.tooltip .desc');
+
+        window.onmousemove = function (e) {
+            var x = e.clientX,
+                y = e.clientY;
+            tooltipSpan.style.top = (y+1) + 'px';
+            tooltipSpan.style.left = (x+1) + 'px';
+        };
+    </script>
 </body>
 </html>
