@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="scripts/tooltip.part.js"></script>
+    <script src="https://kit.fontawesome.com/9cd83d44f1.js" crossorigin="anonymous"></script>
     <title>Meet Tavin</title>
 </head>
 <body class="story-page">
     <story>
         <header>
             <h1>Hi, I'm Tavin!</h1>
-            <div class="content">Live from <span class="tooltip">snowy Colorado<span class="desc">🏔</span></span>, I'm trying to make good things with technology. <a href="mailto:hey@ta.vin">Wanna talk?</a></div>
+            <div class="content">Live from <span class="tooltip">snowy Colorado<span class="desc">🏔</span></span>, I'm trying to make good things with technology. <a href="mailto:hey@ta.vin" class="tooltip">Wanna talk?<span class="desc">📧</span></a></div>
         </header>
         <section>
             <h2>Right now I'm...</h2>
@@ -53,20 +55,10 @@
     <aside>
         <h6>In lieu of carrier pigeon...</h6>
         <div class="links">
-            <a href="https://www.linkedin.com/in/tavin-turner/">LinkedIn</a>
-            <a href="https://twitter.com/tavinoid">Twitter</a>
-            <a href="mailto:hey@ta.vin">Email</a>
+            <a href="https://www.linkedin.com/in/tavin-turner/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/tavinoid"><i class="fa-brands fa-twitter"></i></a>
+            <a href="mailto:hey@ta.vin"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </aside>
-    <script>
-        var tooltipSpan = document.querySelector('.tooltip .desc');
-
-        window.onmousemove = function (e) {
-            var x = e.clientX,
-                y = e.clientY;
-            tooltipSpan.style.top = (y+1) + 'px';
-            tooltipSpan.style.left = (x+1) + 'px';
-        };
-    </script>
 </body>
 </html>

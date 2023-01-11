@@ -14,15 +14,20 @@ a:hover {
     background-color: #E0A14630;
 }
 
-.tooltip {
+.tooltip, a.tooltip {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+a.tooltip {
     text-decoration:none;
     position:relative;
 }
-.tooltip .desc {
+a.tooltip .desc, .tooltip .desc {
     display: none;
     transition: none;
 }
-.tooltip:hover .desc {
+a.tooltip:hover .desc, .tooltip:hover .desc {
     display:block;
     position:fixed;
     overflow:hidden;
@@ -89,14 +94,6 @@ aside h6 {
     letter-spacing: 0em;
 }
 
-aside .links {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    padding-left: 20px;
-    border-left: 2px solid #1B0E19;
-}
 aside .links a {
     font-family: 'Montserrat', 'Helvetica', sans-serif;
     color: #1B0E19;
@@ -108,9 +105,12 @@ aside .links a {
     box-sizing: border-box;
     height: 1.5em;
     width: fit-content;
+    margin-right: 1ch;
 }
 aside .links a:hover {
-    border-bottom: 1px solid #E0A146;
+    background: transparent;
+    border: none;
+    color:#E0A146;
 }
 
 @media (max-width: 850px) {
