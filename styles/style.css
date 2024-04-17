@@ -113,6 +113,29 @@ aside .links a:hover {
     color:#E0A146;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header headshot {
+    position: float;
+    float: left;
+    margin-right: 2em;
+    height: 6em;
+}
+
+header headshot .header-image {
+    height: 100%;
+    border-radius: 50%;
+}
+
+header headside h1 {
+    margin-top: 0.25em;
+}
+
 @media (max-width: 850px) {
     story {
         width: 100%;
