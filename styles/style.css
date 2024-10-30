@@ -81,6 +81,28 @@ section {
     margin: 2.5em 0;
 }
 
+story project::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #E0A14630;
+}
+
+story project:nth-child(1)::before {
+    display: none;
+}
+
+story project h5 {
+    margin-top: 0;
+}
+
+.blog-prompt {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: .7em;
+    font-weight: bold;
+}
+
 aside {
     position: fixed;
     top: 10vmin;
@@ -113,6 +135,26 @@ aside .links a:hover {
     color:#E0A146;
 }
 
+aside .content {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    color: #1B0E19;
+    text-decoration: none;
+    font-weight: regular;
+    font-size: .7em;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    /* height: 1.5em; */
+    min-width: 20vmin;
+    width: min-content;
+    margin-right: 1ch;
+}
+
+aside .content p {
+    margin: 0;
+    margin-bottom: .5em;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -136,12 +178,17 @@ header headside h1 {
     margin-top: 0.25em;
 }
 
-@media (max-width: 850px) {
+ul li::marker {
+    color: #E0A146;
+}
+
+@media (max-width: 1200px) {
     story {
         width: 100%;
     }
     h1 {
-        font-size: 13vmin;
+        font-size: 8vmin;
+        line-height: 9vmin;
     }
     aside {
         position: static;
